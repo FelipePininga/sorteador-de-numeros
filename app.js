@@ -6,6 +6,11 @@ function sortear(){
         alert('Erro: O número inicial não pode ser maior que o final!');
         return;
     }
+    let numeroMaximoPossivel=(ate-de)+1;
+    if(quantidade>numeroMaximoPossivel){
+        alert('Erro: Não é possível sortear a quantidade solicitada de números');
+        return;
+    }
     let numero;
     let sorteados=[];
     for(let contador=quantidade;contador!=0;contador--){
