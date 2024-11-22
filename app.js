@@ -2,7 +2,10 @@ function sortear(){
     let quantidade=parseInt(document.getElementById('quantidade').value);
     let de=parseInt(document.getElementById('de').value);
     let ate=parseInt(document.getElementById('ate').value);
-    
+    if(de>ate){
+        alert('Erro: O número inicial não pode ser maior que o final!');
+        return;
+    }
     let numero;
     let sorteados=[];
     for(let contador=quantidade;contador!=0;contador--){
