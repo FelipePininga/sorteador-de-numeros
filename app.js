@@ -7,8 +7,13 @@ function sortear(){
     let sorteados=[];
     for(let contador=quantidade;contador!=0;contador--){
         numero=obterNumeroAleatorio(de,ate);
+        while(sorteados.includes(numero)){
+            numero=obterNumeroAleatorio(de,ate);
+        }
         sorteados.push(numero);
     }
+    let label=document.getElementById('textoLabel');
+    label.textContent=`Números sorteados:  ${sorteados}`;
 }
 
 function obterNumeroAleatorio(min,max){
